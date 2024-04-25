@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler Sample</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #myElement {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 20px auto;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<button id="button1">Click me</button>
+
+<div id="myElement" style="width: 200px; height: 200px; background-color: lightblue;"></div>
+
+<button id="button2">Submit Form</button>
+
+<input type="text" id="myInput" placeholder="Type something">
+
+<button id="button3">Scroll Page</button>
+
+<script>
+    // Click Event Handler
+    function handleClick() {
+        alert("Button clicked!");
+    }
+    document.getElementById("button1").addEventListener("click", handleClick);
+
+    // Mouseover Event Handler
+    function handleMouseOver() {
+        console.log("Mouse over the element!");
+    }
+    document.getElementById("myElement").addEventListener("mouseover", handleMouseOver);
+
+    // Form Submission Event Handler
+    function handleSubmit(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+        console.log("Form submitted!");
+    }
+    document.getElementById("button2").addEventListener("click", handleSubmit);
+
+    // Input Event Handler
+    function handleInput(event) {
+        console.log("Input value changed:", event.target.value);
+    }
+    document.getElementById("myInput").addEventListener("input", handleInput);
+
+    // Scroll Event Handler
+    function handleScroll() {
+        console.log("Page scrolled!");
+    }
+    document.getElementById("button3").addEventListener("click", handleScroll);
+</script>
+
+</body>
+</html>

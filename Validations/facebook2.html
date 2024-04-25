@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body{
+            background-color: rgb(129, 129, 245);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .reg{
+            height: 400px;
+            width: 400px;
+            margin-top: 80px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px rgba(3, 3, 3, 0.6) ;
+
+        }
+        h2{
+            margin-left: 75px;
+        }
+        .myform{
+            margin-left: 95px;
+            margin-top: 50px;
+        }
+        .myform label{
+            display: block;
+            margin-top: 9px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .myform input[type=submit]{
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="validation.js"></script>
+</head>
+<body>
+    <div class="reg">
+        <h2>Facebook Registration</h2>
+        <form name="myform" class="myform" onsubmit="return validateform()">
+            <label for="name">Username:</label>
+            <input type="text" name="name">
+            <label for="email">Email:</label>
+            <input type="email" name="email">
+            <label for="address">Address:</label>
+            <input type="text" name="address">
+            <label for="password">Password:</label>
+            <input type="password" name="password">
+            <input type="submit" value="Signup">
+        </form>
+    </div>
+</body>
+</html>

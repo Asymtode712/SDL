@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculators.css">
+
+    <script>
+        function Insert(val) {
+          var v = document.getElementById('tfield');
+          v.value += val;
+        }
+        function Result() {
+          var num1 = document.getElementById('tfield').value;
+          var num2 = eval(num1);
+          document.getElementById('tfield').value = num2;
+        }
+        function Clear() {
+          var inp = document.getElementById('tfield');
+          inp.value = '';
+        }
+        function Back() {
+          var ev = document.getElementById('tfield');
+          ev.value = ev.value.slice(0,-1);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <input type="text" placeholder="0" id="tfield">
+        <div class="btn">
+            <input type="button" value = 'C' onclick = "Clear()">
+            <input type="button" value = '%' onclick = "Insert('%')">
+            <input type="button" value = '←' onclick ="Back('←')">
+            <input type="button" value = '/' onclick = "Insert('/')">
+            <br>
+            <input type="button" value = '7' onclick = "Insert('7')">
+            <input type="button" value = '8' onclick = "Insert('8')">
+            <input type="button" value = '9' onclick = "Insert('9')">
+            <input type="button" value = 'x' onclick = "Insert('*')">
+            <br>
+            <input type="button" value = '4' onclick = "Insert('4')">
+            <input type="button" value = '5' onclick = "Insert('5')">
+            <input type="button" value = '6' onclick = "Insert('6')">
+            <input type="button" value = '-' onclick = "Insert('-')">
+            <br>
+            <input type="button" value = '1' onclick = "Insert('1')">
+            <input type="button" value = '2' onclick = "Insert('2')">
+            <input type="button" value = '3' onclick = "Insert('3')">
+            <input type="button" value = '+' onclick = "Insert('+')">
+            <br>
+            <input type="button" value = '00'onclick = "Insert('00')">
+            <input type="button" value = '0' onclick = "Insert('0')">
+            <input type="button" value = '.' onclick = "Insert('.')">
+            <input type="button" value = '=' onclick = "Result()">
+         </div>
+    </div>
+    
+</body>
+</html>
